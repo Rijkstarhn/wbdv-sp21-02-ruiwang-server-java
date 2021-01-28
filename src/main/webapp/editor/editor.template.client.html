@@ -2,9 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Course Manager</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" rel="stylesheet"/>
+    <link href="./editor.style.client.css" rel="stylesheet">
 </head>
 <body>
 
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <i class="crossIconMargin fas fa-times"></i>
+        <a class="brandRightMargin navbar-brand mb-0 h1" href="#">CS5610 - Webdev</a>
+        <div class="navDivMargin collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="col-12 navbar-nav mr-auto">
+                <li class="col-2 nav-item active">
+                    <a class="nav-link" href="#">Build<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="col-2 nav-item">
+                    <a class="nav-link" href="#">Pages<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="col-2 nav-item">
+                    <a class="nav-link" href="#">Theme<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="col-2 nav-item">
+                    <a class="nav-link" href="#">Store<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="col-2 nav-item">
+                    <a class="nav-link" href="#">Apps<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="col-2 nav-item">
+                    <a class="nav-link" href="#">Settings<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class=" fas fa-plus-circle"></i><span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="container col-sm-4">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" href="#">Module 1 jQuery<i
+                        class="float-right fas fa-times"></i></a>
+                <a class="list-group-item list-group-item-action" href="#">Module 2 React<i
+                        class="float-right fas fa-times"></i></a>
+                <a class="list-group-item list-group-item-action" href="#">Module 3 Redux<i
+                        class="float-right fas fa-times"></i></a>
+                <a class="list-group-item list-group-item-action" href="#">Module 4 Native<i
+                        class="float-right fas fa-times"></i></a>
+                <a class="list-group-item list-group-item-action" href="#">Module 5 Angular<i
+                        class="float-right fas fa-times"></i></a>
+                <a class="list-group-item list-group-item-action" href="#"><i
+                        class="float-right fas fa-plus-circle"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <ul class="pillsMargin nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Topic 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Topic 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Topic 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Topic 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i
+                            class="fas fa-plus-circle fa-lg"></i></a>
+                </li>
+            </ul>
+            <br/>
+            Content currently blank
+        </div>
+    </div>
+</div>
 </body>
 </html>
