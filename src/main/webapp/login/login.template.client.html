@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" rel="stylesheet">
     <link href="./login.style.client.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class = "title mb-3">Sign In</h1>
-        <form>
-            <div class="form-group row mb-3">
-                <label for="username" class="col-sm-1 col-form-label">
-                    Username </label>
-                <div class="col-sm-6">
-                    <input class="form-control"
-                           id="username"
-                           placeholder="Alice">
-                </div>
+<div class="container">
+    <h1 class="title mb-3">Sign In</h1>
+    <form>
+        <div class="form-group row mb-3">
+            <label class="col-sm-1 col-form-label" for="username">
+                Username </label>
+            <div class="col-sm-6">
+                <input class="form-control"
+                       id="username"
+                       placeholder="Alice">
             </div>
-            <div class="form-group row mb-3">
-                <label for="password" class="col-sm-1 col-form-label">
-                    Password </label>
-                <div class="col-sm-6">
-                    <input type="password" class="form-control"
-                           id="password" placeholder="123qwe#$%">
-                </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-sm-1 col-form-label" for="password">
+                Password </label>
+            <div class="col-sm-6">
+                <input class="form-control" id="password"
+                       placeholder="123qwe#$%" type="password">
             </div>
-            <div class="form-group row mb-3">
-                <label class="col-sm-1 col-form-label"></label>
-                <div class="col-sm-6">
-                    <button class="btn btn-primary col-12 mb-3 wbdv-login">Sign in</button>
-                    <div class="row">
-                        <div class="col-6">
-                            <a href="#">Forgot Password?</a>
-                        </div>
-                        <div class="col-6">
-                            <a href="../register/register.template.client.html" class = "float-right">Sign up</a>
-                        </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-6">
+                <a href="../profile/profile.template.client.html">
+                    <button class="btn btn-primary col-12 mb-3 wbdv-login" type="button">Sign in</button>
+                </a>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="col-6">
+                        <a class="float-right" href="../register/register.template.client.html">Sign up</a>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>
