@@ -1,0 +1,63 @@
+.tableHeadIconMargin {
+    margin-left: 20px;
+}
+
+.tableHeadMargin {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.titleMargin {
+    margin-left: 8px;
+}
+
+.lastModMargin {
+    margin-left: 100px;
+}
+
+.crossIconMargin {
+    margin-left: 80px;
+}
+
+.dateRangeMargin {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 18px;
+}
+
+.tableRowBackgroundGrey {
+    background-color: lightgrey;
+}
+
+.fileIconMargin {
+    margin-right: 20px;
+}
+
+.barIconStyle {
+    color: white;
+    margin-right: 20px;
+}
+
+.roundBtn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: red;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+    outline: none;
+}
+
+/*#lastCourse {*/
+/*    position: absolute;*/
+/*}*/
+
+/*#roundAddBtn {*/
+/*    position: relative;*/
+/*    right: 10px;*/
+/*}*/
