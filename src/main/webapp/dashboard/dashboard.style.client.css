@@ -53,11 +53,8 @@
     outline: none;
 }
 
-/*#lastCourse {*/
-/*    position: absolute;*/
-/*}*/
-
-/*#roundAddBtn {*/
-/*    position: relative;*/
-/*    right: 10px;*/
-/*}*/
+@media screen and (max-width: 768px) {
+    .hideInSMDevice {
+        display: none;
+    }
+}
