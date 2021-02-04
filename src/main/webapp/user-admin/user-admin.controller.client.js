@@ -1,12 +1,16 @@
 let courses = [
-    {userName: 'wr', password: 1234, firstName: 'Rui', lastName: 'Wang', role: 'Student'},
-    {userName: 'wr', password: 1234, firstName: 'Rui', lastName: 'Wang', role: 'Student'}
+    // {userName: 'wr', password: 1234, firstName: 'Rui', lastName: 'Wang', role: 'Student'},
+    // {userName: 'wr', password: 1234, firstName: 'Rui', lastName: 'Wang', role: 'Student'}
 ]
 
 $(".wbdv-create-btn").click(function () {
-    let id = courses.length
+
     let newCourse = {
-        userName: `lc${id}`, password: 4321, firstName: 'Chen', lastName: 'Ling', role: 'Student'
+        userName: `${$('.usernameFld').val()}`,
+        password: '******',
+        firstName: `${$('.firstNameFld').val()}`,
+        lastName: `${$('.lastNameFld').val()}`,
+        role: `${$('.roleFld').val()}`,
     }
     courses.push(newCourse)
     renderCourse(courses)
