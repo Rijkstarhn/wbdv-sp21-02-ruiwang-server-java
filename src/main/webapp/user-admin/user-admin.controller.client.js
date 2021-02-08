@@ -1,10 +1,11 @@
 let users = []
+let selectedUser = null
 
 function init() {
     let $createBtn = $(".wbdv-create-btn")
     let $updateBtn = $('.wbdv-update-btn')
     $createBtn.click(createUser)
-    $
+    $updateBtn.click(updateUser)
     adminUserServiceClient.findAllUsers().then(function (actualUsers) {
         users = actualUsers
         renderUser(users)
@@ -21,6 +22,7 @@ function createUser() {
     }
     users.push(newUser)
     adminUserServiceClient.createUser(newUser).then(function (response) {
+        clearInput()
         renderUser(users)
     })
 }
@@ -39,17 +41,24 @@ function deleteUser(event) {
 function selectUser(event) {
     let selectedButton = $(event.currentTarget)
     let selectedButtonIndex = selectedButton.attr("id")
-    let selectedUser = users[selectedButtonIndex]
+    selectedUser = users.find(button => button._id === selectedButtonIndex)
     $('.usernameFld').val(selectedUser.userName)
     $('.passwordFld').val(selectedUser.password)
     $('.firstNameFld').val(selectedUser.firstName)
     $('.lastNameFld').val(selectedUser.lastName)
     $('.roleFld').val(selectedUser.role)
-
 }
 
 function updateUser() {
-
+    selectedUser.userName = $('.usernameFld').val()
+    selectedUser.password = $('.passwordFld').val()
+    selectedUser.firstName = $('.firstNameFld').val()
+    selectedUser.lastName = $('.lastNameFld').val()
+    selectedUser.role = $('.roleFld').val()
+    adminUserServiceClient.updateUser(selectedUser._id, selectedUser).then(function (res) {
+        clearInput()
+        renderUser(users)
+    })
 }
 
 function renderUser(users) {
@@ -66,7 +75,7 @@ function renderUser(users) {
                 <td class="wbdv-actions">
             <span class="pull-right">
               <button class="btn wbdv-delete-btn" id="${i}"><i class="fa-2x fa fa-times wbdv-remove"></i></button>
-              <button class="btn wbdv-select-btn"  id="${i}"><i class="fa-2x fa fa-pencil wbdv-edit"></i></button>
+              <button class="btn wbdv-select-btn"  id="${users[i]._id}"><i class="fa-2x fa fa-pencil wbdv-edit"></i></button>
             </span>
                 </td>
             </tr>
@@ -76,6 +85,13 @@ function renderUser(users) {
     $('.wbdv-select-btn').click(selectUser)
 }
 
+function clearInput() {
+    $('.usernameFld').val('')
+    $('.passwordFld').val('')
+    $('.firstNameFld').val('')
+    $('.lastNameFld').val('')
+    $('.roleFld').val('')
+}
 
 $(init)
 

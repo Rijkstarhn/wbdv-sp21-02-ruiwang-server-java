@@ -13,17 +13,16 @@ function AdminUserServiceClient() {
         return fetch(self.url, {
             method: 'POST',
             body: JSON.stringify(user),
-            headers: {'content-type': 'application/json'}
-        }).then(function (response) {
-                return response.json()
-            }
+            headers: {'content-type': 'application/json'},
+        }).then((response) =>
+            response.json()
         )
     }
 
     function findAllUsers() {
-        return fetch(self.url).then(function (response) {
-            return response.json()
-        })
+        return fetch(self.url).then((response) =>
+            response.json()
+        )
     }
 
     function findUserById(userId) {
@@ -31,11 +30,18 @@ function AdminUserServiceClient() {
     }
 
     function updateUser(userId, user) {
+        return fetch(`${self.url}/${userId}`, {
+            method: 'PUT',
+            body: JSON.stringify(user),
+            headers: {
+                'content-type': 'application/json'
+            },
+        }).then((response) => response.json())
     }
 
     function deleteUser(userId) {
-        return fetch(`${self.url}/${userId}`, {method: 'delete'}).then(function (response) {
-            return response.json()
-        })
+        return fetch(`${self.url}/${userId}`, {method: 'delete'}).then((response) =>
+            response.json()
+        )
     }
 }
