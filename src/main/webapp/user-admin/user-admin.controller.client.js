@@ -68,7 +68,7 @@ function renderUser(users) {
         tbody.prepend(`
             <tr class="wbdv-template wbdv-user wbdv-hidden">
                 <td class="wbdv-username">${users[i].userName}</td>
-                <td>&nbsp;</td> // don't show pwd for security reason
+                <td class="wbdv-password hidePassword">${users[i].password}</td> 
                 <td class="wbdv-first-name">${users[i].firstName}</td>
                 <td class="wbdv-last-name">${users[i].lastName}</td>
                 <td class="wbdv-role">${users[i].role}</td>
