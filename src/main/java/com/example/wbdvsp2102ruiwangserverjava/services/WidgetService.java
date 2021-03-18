@@ -31,7 +31,7 @@ public class WidgetService {
 
   public Widget createWidget(String tid, Widget widget) {
     Long id = new Date().getTime();
-    Widget addWidget = new Widget(id, tid, "HEADING", 1, "LOk Tar!", Long.toString(id));
+    Widget addWidget = new Widget(id, tid, "PARAGRAPH", 1, "LOk Tar!", Long.toString(id));
     widgets.add(addWidget);
     return addWidget;
   }
@@ -47,9 +47,9 @@ public class WidgetService {
   }
 
   public int updateWidget(String wid, Widget widget) {
-    for (Widget updateWidget : widgets) {
-      if (updateWidget.getWidgetId().equals(wid)) {
-        updateWidget = widget;
+    for (int i = 0; i < widgets.size(); i++) {
+      if (widgets.get(i).getWidgetId().equals(wid)) {
+        widgets.set(i, widget);
         return 1;
       }
     }
