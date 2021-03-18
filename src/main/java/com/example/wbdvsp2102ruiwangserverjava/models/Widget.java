@@ -3,6 +3,7 @@ package com.example.wbdvsp2102ruiwangserverjava.models;
 public class Widget {
   private String name;
   private Long id;
+  private Long key;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -20,6 +21,7 @@ public class Widget {
 
   public Widget(Long id, String topicId, String type, Integer size, String text, String widgetId) {
     this.id = id;
+    this.key = id;
     this.topicId = topicId;
     this.type = type;
     this.size = size;
@@ -49,6 +51,14 @@ public class Widget {
 
   public void setWidgetId(String widgetId) {
     this.widgetId = widgetId;
+  }
+
+  public Long getKey() {
+    return key;
+  }
+
+  public void setKey(Long key) {
+    this.key = key;
   }
 
   public String getType() {
