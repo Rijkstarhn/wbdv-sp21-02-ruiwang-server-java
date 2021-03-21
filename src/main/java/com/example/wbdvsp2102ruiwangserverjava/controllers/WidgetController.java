@@ -24,12 +24,12 @@ public class WidgetController {
   }
 
   @PostMapping("/api/topics/{tid}/widgets")
-  public Widget createWidget(@PathVariable("tid") String tid, Widget widget) {
+  public Widget createWidget(@PathVariable("tid") String tid, @RequestBody Widget widget) {
     return service.createWidget(tid, widget);
   }
 
   @PutMapping("/api/widgets/{wid}")
-  public int updateWidget(@PathVariable("wid") String wid, Widget widget) {
+  public int updateWidget(@PathVariable("wid") String wid, @RequestBody Widget widget) {
     return service.updateWidget(wid, widget);
   }
 
