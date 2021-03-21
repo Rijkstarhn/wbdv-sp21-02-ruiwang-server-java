@@ -31,7 +31,7 @@ public class WidgetService {
 
   public Widget createWidget(String tid, Widget widget) {
     Long id = new Date().getTime();
-    Widget addWidget = new Widget(id, tid, "PARAGRAPH", 1, "LOk Tar!", Long.toString(id));
+    Widget addWidget = new Widget(id, tid, "HEADING", 1, "New Widget", Long.toString(id));
     widgets.add(addWidget);
     return addWidget;
   }
