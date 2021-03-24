@@ -1,9 +1,22 @@
 package com.example.wbdvsp2102ruiwangserverjava.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import static javax.persistence.GenerationType.IDENTITY;
+
+@Entity
+@Table(name = "widgets")
 public class Widget {
-  private String name;
+
+  @Id
+  @GeneratedValue(strategy = IDENTITY)
   private Long id;
-  private Long key;
+
+  private String name;
+  private Long widgetKey;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -21,7 +34,7 @@ public class Widget {
 
   public Widget(Long id, String topicId, String type, Integer size, String text, String widgetId) {
     this.id = id;
-    this.key = id;
+    this.widgetKey = id;
     this.topicId = topicId;
     this.type = type;
     this.size = size;
@@ -53,12 +66,12 @@ public class Widget {
     this.widgetId = widgetId;
   }
 
-  public Long getKey() {
-    return key;
+  public Long getWidgetKey() {
+    return widgetKey;
   }
 
-  public void setKey(Long key) {
-    this.key = key;
+  public void setWidgetKey(Long widgetKey) {
+    this.widgetKey = widgetKey;
   }
 
   public String getType() {
@@ -83,5 +96,69 @@ public class Widget {
 
   public void setText(String text) {
     this.text = text;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Integer getWidgetOrder() {
+    return widgetOrder;
+  }
+
+  public void setWidgetOrder(Integer widgetOrder) {
+    this.widgetOrder = widgetOrder;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public Integer getWidth() {
+    return width;
+  }
+
+  public void setWidth(Integer width) {
+    this.width = width;
+  }
+
+  public Integer getHeight() {
+    return height;
+  }
+
+  public void setHeight(Integer height) {
+    this.height = height;
+  }
+
+  public String getCssClass() {
+    return cssClass;
+  }
+
+  public void setCssClass(String cssClass) {
+    this.cssClass = cssClass;
+  }
+
+  public String getStyle() {
+    return style;
+  }
+
+  public void setStyle(String style) {
+    this.style = style;
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
   }
 }
