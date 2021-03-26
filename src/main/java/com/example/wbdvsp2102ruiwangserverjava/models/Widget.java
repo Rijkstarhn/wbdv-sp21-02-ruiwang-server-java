@@ -20,7 +20,7 @@ public class Widget {
   private String type;
   private Integer widgetOrder;
   private String text;
-  private String url;
+  private String src;
   private Integer size;
   private Integer width;
   private Integer height;
@@ -114,12 +114,12 @@ public class Widget {
     this.widgetOrder = widgetOrder;
   }
 
-  public String getUrl() {
-    return url;
+  public String getSrc() {
+    return src;
   }
 
-  public void setUrl(String url) {
-    this.url = url;
+  public void setSrc(String src) {
+    this.src = src;
   }
 
   public Integer getWidth() {
