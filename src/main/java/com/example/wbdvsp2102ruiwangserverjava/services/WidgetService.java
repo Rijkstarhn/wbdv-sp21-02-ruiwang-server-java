@@ -45,6 +45,7 @@ public class WidgetService {
       widget.setType("HEADING");
       widget.setText("A new Bloray delana");
       widget.setSize(1);
+      widget.setOrderedList(false);
       return widgetRepository.save(widget);
   }
 
@@ -75,6 +76,8 @@ public class WidgetService {
           originalWidget.setType(widget.getType());
           originalWidget.setText(widget.getText());
           originalWidget.setSize(widget.getSize());
+          System.out.println(widget.getOrderedList());
+          originalWidget.setOrderedList(widget.getOrderedList());
 
           widgetRepository.save(originalWidget);
       } else {

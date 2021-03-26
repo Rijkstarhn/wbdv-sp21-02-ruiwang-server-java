@@ -29,6 +29,7 @@ public class Widget {
   private String value;
   private String topicId;
   private String widgetId;
+  private Boolean orderedList;
 
   public Widget() {}
 
@@ -40,6 +41,12 @@ public class Widget {
     this.size = size;
     this.text = text;
     this.widgetId = widgetId;
+    this.orderedList = false;
+    System.out.println("the constructor is called!");
+  }
+
+  public Boolean getOrderedList() {
+    return orderedList;
   }
 
   public Long getId() {
@@ -160,5 +167,9 @@ public class Widget {
 
   public void setValue(String value) {
     this.value = value;
+  }
+
+  public void setOrderedList(Boolean orderedList) {
+    this.orderedList = orderedList;
   }
 }
