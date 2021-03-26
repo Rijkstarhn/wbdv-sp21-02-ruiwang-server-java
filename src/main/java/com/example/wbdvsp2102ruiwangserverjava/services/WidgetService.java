@@ -46,6 +46,9 @@ public class WidgetService {
       widget.setText("A new Bloray delana");
       widget.setSize(1);
       widget.setOrderedList(false);
+      widget.setWidth(400);
+      widget.setHeight(300);
+      widget.setSrc("https://cdn.hearthstonetopdecks.com/wp-content/uploads/2020/03/demon-hunter-1000-wins.jpg");
       return widgetRepository.save(widget);
   }
 
@@ -76,8 +79,10 @@ public class WidgetService {
           originalWidget.setType(widget.getType());
           originalWidget.setText(widget.getText());
           originalWidget.setSize(widget.getSize());
-          System.out.println(widget.getOrderedList());
           originalWidget.setOrderedList(widget.getOrderedList());
+          originalWidget.setWidth(widget.getWidth());
+          originalWidget.setHeight(widget.getHeight());
+          originalWidget.setSrc(widget.getSrc());
 
           widgetRepository.save(originalWidget);
       } else {
